@@ -47,8 +47,8 @@ double Evaluator::eval(ASTNode* ast)
 
 void Evaluator::evalWhile(ASTNode* ast)
 {
-    bool c1 = eval(ast->Left);
-	bool c2 = eval(ast->Right);
+    bool c1 = evalBool(ast->Left);
+	bool c2 = evalBool(ast->Right);
     while (c1)
     {
         cout << c2;
@@ -57,7 +57,13 @@ void Evaluator::evalWhile(ASTNode* ast)
 
 void Evaluator::evalIfElse(ASTNode* ast)
 {
-    
+    bool b1 = evalBool(ast->Center);
+    bool b2 = eval(ast->Left);
+    bool b3 = eval(ast->Right);
+    if (b1)
+        cout << b2;
+    else
+        cout << b3;
 }
 
 bool Evaluator::evalBool(ASTNode* ast)
