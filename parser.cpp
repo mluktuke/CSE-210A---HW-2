@@ -1,6 +1,5 @@
 #include <iostream>
 #include <sstream>
-#include "stdafx.h"
 using namespace std;
 #include "parser.h"
 
