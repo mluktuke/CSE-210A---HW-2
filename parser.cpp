@@ -194,6 +194,11 @@ void Parser::GetNextToken()
 	case '-': m_crtToken.Type = Minus; break;
 	case '*': m_crtToken.Type = Mul; break;
 	case '/': m_crtToken.Type = Div; break;
+    case '==': m_crtToken.Type = OperatorEqual; break;
+    case '<' : m_crtToken.Type = OpLessThan; break;
+    case '∨' : m_crtToken.Type = OperatorConj; break;
+    case '∧' : m_crtToken.Type = OperatorDisj; break;
+    case '¬' : m_crtToken.Type = OperatorNot; break;
 	}
 
 	if (m_crtToken.Type != Error)
